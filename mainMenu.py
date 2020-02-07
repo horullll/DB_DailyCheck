@@ -18,7 +18,7 @@ def menu():
     if choice == "A" or choice == "a":
 
       dayCheckMon.main('DEV502')
-      # dayCheckMon.main('HIS012')
+      dayCheckMon.main('HIS012')
       # dayCheckMon.main('HIS013')
       # dayCheckMon.main('HIS014')
       # dayCheckMon.main('HIS015')
