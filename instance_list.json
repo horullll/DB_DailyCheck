@@ -1,0 +1,122 @@
+{
+    "CMC001" : {
+      "HOST" : "172.17.11.51",
+      "USERNAME" : "system",
+      "PASSWORD" : "dksemfhapekxhRl#5",
+      "SERVICE_NAME" : "CMC001",
+      "PORT" : "1521"
+    },
+
+    "MIS001" : {
+      "HOST" : "172.17.11.51",
+      "USERNAME" : "system",
+      "PASSWORD" : "dksemfhapekxhRl#5",
+      "SERVICE_NAME" : "MIS001",
+      "PORT" : "1522"
+    },
+
+    "HIS011" : {
+      "HOST" : "172.17.21.51",
+      "USERNAME" : "system",
+      "PASSWORD" : "dksemfhapekxhRl#5",
+      "SERVICE_NAME" : "HIS011",
+      "PORT" : "1521"
+  },
+
+    "HIS011CA" : {
+    "HOST" : "172.17.21.52",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "BHIS011",
+    "PORT" : "1520"
+  },
+
+    "HIS012" : {
+    "HOST" : "172.17.31.51",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "HIS012",
+    "PORT" : "1521"
+  },
+
+    "HIS012CA" : {
+    "HOST" : "172.17.31.52",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "BHIS012",
+    "PORT" : "1520"
+  },
+
+    "HIS013" : {
+    "HOST" : "172.17.41.51",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "HIS013",
+    "PORT" : "1521"
+  },
+
+    "HIS013CA" : {
+    "HOST" : "172.17.41.52",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "BHIS013",
+    "PORT" : "1520"
+  },
+
+    "HIS014" : {
+    "HOST" : "172.17.71.51",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "HIS014",
+    "PORT" : "1521"
+  },
+
+    "HIS014CA" : {
+    "HOST" : "172.17.71.52",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "BHIS014",
+    "PORT" : "1521"
+  },
+
+    "HIS015" : {
+    "HOST" : "172.17.51.61",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "HIS015",
+    "PORT" : "1527"
+  },
+
+    "HIS016" : {
+    "HOST" : "172.17.61.152",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "HIS016",
+    "PORT" : "1527"
+  },
+
+    "HIS017" : {
+    "HOST" : "172.17.81.51",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "HIS017",
+    "PORT" : "1521"
+  },
+
+    "HIS017CA" : {
+    "HOST" : "172.17.81.52",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "BHIS017",
+    "PORT" : "1520"
+  },
+
+    "DEV502" : {
+    "HOST" : "172.17.111.153",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekRkcl#5",
+    "SERVICE_NAME" : "DEV502",
+    "PORT" : "1525"
+  }
+
+}
