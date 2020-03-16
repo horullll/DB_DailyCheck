@@ -19,9 +19,12 @@ def menu():
       dayCheckMon.main('DEV502')
 
       instance_list = parsingJson.getInstanceList()
+
       for i in instance_list :
-        print(i)
-        #dayCheckMon.main(i)
+        # CA DB가 아니면
+        if "CA" not in i  :
+            print(i)
+            #dayCheckMon.main(i)
 
     elif choice == "Q" or choice == "q":
         sys.exit
