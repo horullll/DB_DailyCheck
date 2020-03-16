@@ -1,4 +1,4 @@
-import sys, dbConnection, dayCheckMon
+import sys, dbConnection, dayCheckMon, parsingJson
 
 def main():
     menu()
@@ -18,14 +18,11 @@ def menu():
     if choice == "A" or choice == "a":
 
       dayCheckMon.main('DEV502')
-      dayCheckMon.main('HIS012')
-      # dayCheckMon.main('HIS013')
-      # dayCheckMon.main('HIS014')
-      # dayCheckMon.main('HIS015')
-      # dayCheckMon.main('HIS016')
-      # dayCheckMon.main('HIS017')
-      # dayCheckMon.main('MIS001')
-      # dayCheckMon.main('CMC001')
+
+      instance_list = parsingJson.getInstanceList()
+      for i in instance_list :
+        print(i)
+        #dayCheckMon.main(i)
 
     elif choice == "Q" or choice == "q":
         sys.exit
