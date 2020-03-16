@@ -16,7 +16,6 @@ def menu():
                       Please enter your choice: """)
 
     if choice == "A" or choice == "a":
-
       dayCheckMon.main('DEV502')
 
       instance_list = parsingJson.getInstanceList()
@@ -27,7 +26,7 @@ def menu():
     elif choice == "Q" or choice == "q":
         sys.exit
     else:
-        print("You must only select either A,B,C, or D.")
+        print("You must only select either A,B,C, or Q.")
         print("Please try again")
         menu()
 
