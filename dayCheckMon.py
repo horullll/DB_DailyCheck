@@ -4,14 +4,16 @@ def main(instanceName) :
     dbCon = dbConnection.dbCon(instanceName)
     cursor = dbCon.cursor()
     print('\nDB instance :' + instanceName)
+
     printDBinfo(cursor)
-
-    if instanceName == 'HIS015' or instanceName == 'HIS016' or instanceName == 'DEV502' :
-        tablespaceUseInfo_v12c(cursor)
+    if 'BACKUP' not in instanceName :
+        if 'HIS015' in instanceName  or 'HIS016' in instanceName   :
+            tablespaceUseInfo_v12c(cursor)
+            asmRecoverySpaceCheck(cursor)
+        else :
+            tablespaceUseInfo(cursor)
     else :
-        tablespaceUseInfo(cursor)
-
-    rmanBackupCheck()
+        rmanBackupCheck(instanceName)
     cursor.close()
     dbConnection.dbClose(dbCon)
 
@@ -175,11 +177,11 @@ def tablespaceUseInfo_v12c(cursor) :
 
 
 
-def rmanBackupCheck() :
+def rmanBackupCheck(rmanInstanceName) :
     print("\nRMAN BACKUP CHECK!!\n")
     alter_data_format = "alter session set nls_date_format='YYYYMMDD-HH24:MI:SS'  "
 
-    dbCon = dbConnection.dbCon('HIS011CA')
+    dbCon = dbConnection.dbCon(rmanInstanceName)
     cursor = dbCon.cursor()
     cursor.execute(alter_data_format)
 
@@ -234,3 +236,20 @@ def rmanBackupCheck() :
     for i in cursor :
         print(i)
 
+def asmRecoverySpaceCheck(cursor) :
+    print("\nCHECK ARCHIVE LOG USAGE!!")
+
+    sql = """ 
+            select name,  round(USABLE_FILE_MB/1024,2) USABLE_FILE_GB,
+              round(total_mb/1024,2) TOTAL_GB,
+              round(free_mb/1024,2) FREE_GB,
+              round((total_mb-free_mb)/1024,2) USED_GB,
+              100-round(free_mb/total_mb*100)||'%' "USED(%)",
+              round(REQUIRED_MIRROR_FREE_MB/1024,2) REQUIRED_MIRROR_FREE_GB,
+              round(((FREE_MB - REQUIRED_MIRROR_FREE_MB))/1024,2) USABLE_GB,
+              state, type, group_number
+            from v$asm_diskgroup
+    """
+    cursor.execute(sql)
+    for i in cursor:
+        print("NAME : " + i[0] + "  USE(%) : " + str(i[5]))

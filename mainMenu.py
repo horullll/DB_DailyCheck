@@ -16,15 +16,17 @@ def menu():
                       Please enter your choice: """)
 
     if choice == "A" or choice == "a":
-      dayCheckMon.main('DEV502')
+        #dayCheckMon.main("DEV502")
+        instance_list = parsingJson.getInstanceList()
+        instance_list.sort()
 
-      instance_list = parsingJson.getInstanceList()
+        for i in instance_list:
 
-      for i in instance_list :
-        # CA DB가 아니면
-        if "CA" not in i  :
-            print(i)
-            #dayCheckMon.main(i)
+            if "BACKUP" not in i :
+                dayCheckMon.main(i)
+            else:
+                print("BACKUP DB!  " + i )
+                dayCheckMon.main(i)
 
     elif choice == "Q" or choice == "q":
         sys.exit

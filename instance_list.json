@@ -7,12 +7,28 @@
       "PORT" : "1521"
     },
 
+    "BACKUP_CMC001" : {
+      "HOST" : "172.17.11.52",
+      "USERNAME" : "system",
+      "PASSWORD" : "dksemfhapekxhRl#5",
+      "SERVICE_NAME" : "BCMC001",
+      "PORT" : "1520"
+    },
+
     "MIS001" : {
       "HOST" : "172.17.11.51",
       "USERNAME" : "system",
       "PASSWORD" : "dksemfhapekxhRl#5",
       "SERVICE_NAME" : "MIS001",
       "PORT" : "1522"
+    },
+
+    "BACKUP_MIS001" : {
+      "HOST" : "172.17.11.52",
+      "USERNAME" : "system",
+      "PASSWORD" : "dksemfhapekxhRl#5",
+      "SERVICE_NAME" : "BMIS001",
+      "PORT" : "1520"
     },
 
     "HIS011" : {
@@ -23,7 +39,7 @@
       "PORT" : "1521"
   },
 
-    "HIS011CA" : {
+    "BACKUP_HIS011CA" : {
     "HOST" : "172.17.21.52",
     "USERNAME" : "system",
     "PASSWORD" : "dksemfhapekxhRl#5",
@@ -39,7 +55,7 @@
     "PORT" : "1521"
   },
 
-    "HIS012CA" : {
+    "BACKUP_HIS012CA" : {
     "HOST" : "172.17.31.52",
     "USERNAME" : "system",
     "PASSWORD" : "dksemfhapekxhRl#5",
@@ -55,7 +71,7 @@
     "PORT" : "1521"
   },
 
-    "HIS013CA" : {
+    "BACKUP_HIS013CA" : {
     "HOST" : "172.17.41.52",
     "USERNAME" : "system",
     "PASSWORD" : "dksemfhapekxhRl#5",
@@ -71,16 +87,24 @@
     "PORT" : "1521"
   },
 
-    "HIS014CA" : {
+    "BACKUP_HIS014CA" : {
     "HOST" : "172.17.71.52",
     "USERNAME" : "system",
     "PASSWORD" : "dksemfhapekxhRl#5",
     "SERVICE_NAME" : "BHIS014",
-    "PORT" : "1521"
+    "PORT" : "1520"
   },
 
     "HIS015" : {
     "HOST" : "172.17.51.61",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "HIS015",
+    "PORT" : "1527"
+  },
+
+    "BACKUP_HIS015" : {
+    "HOST" : "172.17.51.62",
     "USERNAME" : "system",
     "PASSWORD" : "dksemfhapekxhRl#5",
     "SERVICE_NAME" : "HIS015",
@@ -95,6 +119,14 @@
     "PORT" : "1527"
   },
 
+    "BACKUP_HIS016" : {
+    "HOST" : "172.17.61.151",
+    "USERNAME" : "system",
+    "PASSWORD" : "dksemfhapekxhRl#5",
+    "SERVICE_NAME" : "HIS016",
+    "PORT" : "1527"
+  },
+
     "HIS017" : {
     "HOST" : "172.17.81.51",
     "USERNAME" : "system",
@@ -103,7 +135,7 @@
     "PORT" : "1521"
   },
 
-    "HIS017CA" : {
+    "BACKUP_HIS017CA" : {
     "HOST" : "172.17.81.52",
     "USERNAME" : "system",
     "PASSWORD" : "dksemfhapekxhRl#5",
@@ -118,5 +150,4 @@
     "SERVICE_NAME" : "DEV502",
     "PORT" : "1525"
   }
-
 }
